@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · CINE</title>
+<meta name="description" content="CINE: aplicación de escritorio para Windows que genera subtítulos en español para videos.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+<div class="brand">CINE</div>
+<nav aria-label="Principal"><ul><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="terms.html">Términos</a></li><li><a href="privacy.html">Privacidad</a></li><li><a href="support.html">Soporte</a></li></ul></nav>
+</header>
+<main id="contenido">
+
+<h1>CINE: subtítulos en español para tus videos</h1>
+<p class="lead">CINE es una aplicación de escritorio para Windows, desarrollada en Python, que prepara subtítulos en español (de México) para videos que tú seleccionas.</p>
+<div class="notice" role="note"><strong>Estado de la publicación en TikTok:</strong> la integración con TikTok es <strong>experimental y está desactivada</strong>. Está pendiente de autorización de TikTok y de pruebas reales. <strong>CINE todavía no publica videos mediante la API de TikTok.</strong></div>
+<h2>Qué hace hoy</h2>
+<ol>
+<li>Recibe un archivo de video que el usuario selecciona.</li>
+<li>Transcribe el audio de forma local con Whisper (faster-whisper), en el propio equipo.</li>
+<li>Traduce y adapta los diálogos al español mediante la API de Gemini de Google. Para esto se envía el <em>texto</em> transcrito a Google (ver la <a href="privacy.html">política de privacidad</a>).</li>
+<li>Genera subtítulos en formato SRT, junto con un JSON con la traducción y los tiempos.</li>
+<li>Opcionalmente, incrusta los subtítulos en una <em>copia</em> del video con FFmpeg.</li>
+<li>Conserva intacto el video original: nunca lo modifica ni lo sobrescribe.</li>
+</ol>
+<h2>Cómo se usa</h2>
+<p>El usuario abre el panel de CINE, elige un video y pulsa «Iniciar». El panel muestra el avance de cada etapa y los archivos resultantes quedan en carpetas locales. CINE también puede usarse desde la línea de comandos.</p>
+<h2>Qué no hace</h2>
+<ul>
+<li>No genera doblaje ni voz sintética.</li>
+<li>No es un servicio en línea ni requiere una cuenta de CINE: se ejecuta en el equipo del usuario.</li>
+<li>No publica en TikTok (por ahora). Los videos terminados pueden prepararse para que el usuario los suba manualmente.</li>
+<li>No concede derechos sobre el contenido: el usuario debe tener derecho o autorización para procesar y publicar cada video (ver los <a href="terms.html">términos</a>).</li>
+</ul>
+<h2>Servicios externos</h2>
+<p>La traducción depende de Google Gemini. La publicación, cuando se habilite, dependería de TikTok. Ambos son servicios de terceros con sus propias condiciones.</p>
+<p>¿Dudas? Consulta la página de <a href="support.html">soporte</a>.</p>
+
+</main>
+<footer>
+<p>CINE · Última actualización: 16 de octubre de 2026. Este sitio no usa cookies, analítica, rastreadores ni publicidad.</p>
+<p><a href="index.html">Inicio</a> · <a href="terms.html">Términos</a> · <a href="privacy.html">Privacidad</a> · <a href="support.html">Soporte</a></p>
+</footer>
+</body>
+</html>

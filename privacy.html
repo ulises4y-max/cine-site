@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · CINE</title>
+<meta name="description" content="Política de privacidad de CINE: qué datos se procesan y a dónde se envían.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+<div class="brand">CINE</div>
+<nav aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="terms.html">Términos</a></li><li><a href="privacy.html" aria-current="page">Privacidad</a></li><li><a href="support.html">Soporte</a></li></ul></nav>
+</header>
+<main id="contenido">
+
+<h1>Política de privacidad</h1>
+<p class="lead">Última actualización: 16 de octubre de 2026.</p>
+<p>Esta política describe cómo funciona CINE actualmente. CINE se ejecuta en el equipo del usuario; este sitio es solo informativo.</p>
+<div class="notice" role="note"><strong>Importante:</strong> el texto transcrito de tus videos <strong>sí se envía a un tercero</strong> (Google) para traducirlo. Si no quieres eso, no uses la traducción con Gemini.</div>
+<h2>Qué se procesa localmente</h2>
+<ul>
+<li>El video original se lee en el equipo del usuario. El audio se transcribe localmente con Whisper y FFmpeg; CINE no envía el audio ni el video a ningún servicio.</li>
+<li>La primera vez, Whisper descarga su modelo desde internet.</li>
+<li>La salida (SRT, JSON y, si se pidió, el MP4 subtitulado) se guarda en las carpetas configuradas por CINE, por defecto dentro de la carpeta de datos del programa.</li>
+</ul>
+<h2>Qué se envía a Google (Gemini)</h2>
+<ul>
+<li>Para traducir y ajustar subtítulos, CINE envía a la API de Gemini el <strong>texto transcrito</strong> de los diálogos, sus tiempos, algunos fragmentos previos como contexto y el idioma detectado.</li>
+<li>El tratamiento que Google da a esos datos se rige por las condiciones y políticas de Google para la API de Gemini y por el plan de la clave que use cada usuario. No podemos verificar sus prácticas de retención y aquí no hacemos afirmaciones sobre ellas. Consulta las políticas de Google.</li>
+<li>CINE no envía el archivo de video ni el de audio.</li>
+</ul>
+<h2>Claves y credenciales</h2>
+<ul>
+<li>Las claves API (por ejemplo <code>GEMINI_API_KEY</code>) deben mantenerse en variables de entorno, no en el código.</li>
+<li>CINE no guarda las claves en los archivos de trabajos ni en los registros.</li>
+<li>Si el usuario habilitara la integración con TikTok, la autorización se haría con el inicio de sesión oficial de TikTok y el token se guardaría cifrado con Windows. <strong>Esa integración está desactivada.</strong></li>
+</ul>
+<h2>Datos guardados localmente</h2>
+<ul>
+<li><strong>Trabajos de procesamiento:</strong> ruta y nombre del video original, duración, texto original y traducido con sus tiempos, resultados de cada etapa, estados, errores y fechas.</li>
+<li><strong>Registros (<code>cine.log</code>):</strong> eventos de las etapas, estados y mensajes de error. Pueden incluir nombres de archivo y rutas, y el texto de error que devuelva la API de Gemini.</li>
+<li><strong>Cola de publicación:</strong> título, descripción, declaración de derechos y estado de cada video preparado.</li>
+<li>Estos datos permanecen en el equipo hasta que el usuario los borre. Si la carpeta está dentro de un servicio de sincronización (por ejemplo OneDrive), ese servicio podrá sincronizarlos según su propia configuración.</li>
+</ul>
+<h2>TikTok</h2>
+<p>La publicación en TikTok es experimental y está desactivada. Actualmente CINE no se conecta a TikTok ni transmite datos a TikTok.</p>
+<h2>Este sitio</h2>
+<p>Este sitio es estático. No usa cookies, analítica, rastreadores ni publicidad por parte nuestra. Si se aloja en un servicio como GitHub Pages, ese servicio puede registrar visitas según sus propias políticas.</p>
+<h2>Derechos y contacto</h2>
+<p>Los datos de CINE están en el equipo del usuario, quien puede consultarlos o borrarlos directamente. Para preguntas, consulta la página de <a href="support.html">soporte</a>.</p>
+
+</main>
+<footer>
+<p>CINE · Última actualización: 16 de octubre de 2026. Este sitio no usa cookies, analítica, rastreadores ni publicidad.</p>
+<p><a href="index.html">Inicio</a> · <a href="terms.html">Términos</a> · <a href="privacy.html">Privacidad</a> · <a href="support.html">Soporte</a></p>
+</footer>
+</body>
+</html>
